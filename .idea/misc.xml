@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/compose-model-1644998998935.xml" value="0.31165540540540543" />
+        <entry key="../../../../layout/compose-model-1645593384626.xml" value="1.3176895306859207" />
+        <entry key="../../../../layout/compose-model-1645603128392.xml" value="0.33" />
+        <entry key="../../../../layout/compose-model-1645608690865.xml" value="0.3108108108108108" />
+        <entry key="../../../../layout/compose-model-1645612251352.xml" value="0.1" />
+        <entry key="../../../../layout/custom_preview.xml" value="0.33796296296296297" />
+        <entry key="app/src/main/res/drawable/ic_bookmark.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_create.xml" value="0.18" />
+        <entry key="app/src/main/res/drawable/ic_home_new.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_message_new.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.1825" />
+        <entry key="app/src/main/res/drawable/ic_user_new.xml" value="0.1825" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
