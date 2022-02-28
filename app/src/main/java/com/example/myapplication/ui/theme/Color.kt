@@ -6,11 +6,11 @@ import androidx.compose.ui.graphics.Color
  * Palette colors
  * Colors for "internal use" only
  * */
-private val Shark = Color(0xFF1D2022)
-private val RegentGray = Color(0xFF8C9AA3)
-private val JungleGreen = Color(0xFF31AC8F)
-private val Porcelain = Color(0xFFE2E5E8)
-private val Sun = Color(0xFFFFAF14)
+val Shark = Color(0xFF1D2022)
+val RegentGray = Color(0xFF8C9AA3)
+val JungleGreen = Color(0xFF31AC8F)
+val Porcelain = Color(0xFFE2E5E8)
+val Sun = Color(0xFFFFAF14)
 
 val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)

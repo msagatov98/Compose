@@ -2,6 +2,7 @@ package com.example.myapplication.sosedi.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -13,12 +14,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.BottomSheetScaffoldState
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,7 +31,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myapplication.R
 import com.example.myapplication.ui.theme.IconDefaultColor
-import com.example.myapplication.ui.theme.Primary
 import com.example.myapplication.ui.theme.TextPrimaryDark
 import com.example.myapplication.ui.theme.ToggleBackgroundFeed
 import com.example.myapplication.ui.theme.ToggleBackgroundMarketplace
@@ -38,13 +40,17 @@ import com.example.myapplication.ui.theme.ToggleTextFeed
 import com.example.myapplication.ui.theme.ToggleTextMarketplace
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.PagerState
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-@OptIn(ExperimentalPagerApi::class)
+@OptIn(ExperimentalPagerApi::class, androidx.compose.material.ExperimentalMaterialApi::class)
 @Composable
 fun TopBar(
-    pageState: PagerState
+    pageState: PagerState,
+    bottomSheetScaffoldState: BottomSheetScaffoldState
 ) {
+    val coroutineScope = rememberCoroutineScope()
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -73,7 +79,16 @@ fun TopBar(
                 contentDescription = null,
                 modifier = Modifier
                     .size(40.dp)
-                    .padding(8.dp),
+                    .padding(8.dp)
+                    .clickable {
+                        coroutineScope.launch {
+                            if (bottomSheetScaffoldState.bottomSheetState.isCollapsed) {
+                                bottomSheetScaffoldState.bottomSheetState.expand()
+                            } else {
+                                bottomSheetScaffoldState.bottomSheetState.collapse()
+                            }
+                        }
+                    },
                 tint = IconDefaultColor
             )
 
@@ -82,8 +97,17 @@ fun TopBar(
                 contentDescription = null,
                 modifier = Modifier
                     .size(40.dp)
-                    .padding(8.dp),
-                tint = IconDefaultColor
+                    .padding(8.dp)
+                    .clickable {
+                        coroutineScope.launch {
+                            if (bottomSheetScaffoldState.bottomSheetState.isCollapsed) {
+                                bottomSheetScaffoldState.bottomSheetState.expand()
+                            } else {
+                                bottomSheetScaffoldState.bottomSheetState.collapse()
+                            }
+                        }
+                    },
+                tint = IconDefaultColor,
             )
         }
 
